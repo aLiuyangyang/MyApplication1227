@@ -53,11 +53,11 @@ public class MyXecyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
           ViewHolder holder= (ViewHolder) viewHolder;
           holder.item_name.setText(list.get(i).getTitle());
           holder.item_price.setText(list.get(i).getPrice()+"");
-        String images = list.get(i).getImages();
-        String[] split = images.split("\\|");
-        Uri uri = Uri.parse(split[0]);
-        holder.simpleDraweeView.setImageURI(uri);
-         holder.itemView.setOnClickListener(new View.OnClickListener() {
+          String images = list.get(i).getImages();
+          String[] split = images.split("\\|");
+          Uri uri = Uri.parse(split[0]);
+          holder.simpleDraweeView.setImageURI(uri);
+          holder.itemView.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
 

@@ -35,12 +35,10 @@ public class ShopFragments extends Fragment implements IView ,View.OnClickListen
 
     private Presenterlmpl presenterlmpl;
     private SimpleDraweeView shop_simple;
-
     private  Button but_name;
-
-   private Button but_price;
-   private TextView shop_name;
-   private TextView shop_price;
+    private Button but_price;
+    private TextView shop_name;
+    private TextView shop_price;
     private ShopBean.DataBean data1;
 
     @Nullable
@@ -59,12 +57,12 @@ public class ShopFragments extends Fragment implements IView ,View.OnClickListen
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
       //  ButterKnife.bind(getActivity());
-        int setname = ((ShopActivity) getActivity()).setname();
+       /* int setname = ((ShopActivity) getActivity()).setname();*/
         presenterlmpl = new Presenterlmpl(this);
         but_name.setOnClickListener(this);
         but_price.setOnClickListener(this);
         Map<String, String> mar = new HashMap<>();
-        mar.put("pid",setname+"");
+      /*  mar.put("pid",setname+"");*/
         presenterlmpl.setRquestData(Apis.ShopPath, mar, ShopBean.class);
     }
 
